@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane prefHeight="850" prefWidth="1000" stylesheets="@firstPage.css" xmlns="http://javafx.com/javafx/8.0.171" 
+			xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FirstController">
+	<children>
+	<AnchorPane>
+	  <Label id="subject" layoutX="320" layoutY="150" text="ESC" />
+	  <Label layoutX="342" layoutY="326" text="Id" />
+	  <Label layoutX="342" layoutY="366" text="Pwd" />
+	  <TextField fx:id="id" layoutX="420" layoutY="324" />
+	  <PasswordField fx:id="pwd" layoutX="420" layoutY="362" />
+	  <Button fx:id="membersBtn" layoutX="342" layoutY="406" text="members" />
+	  <Button fx:id="loginBtn" layoutX="437" layoutY="406" text="login" />
+	  <Button fx:id="exit" layoutX="510" layoutY="406" onAction="#handleBtnAction" text="exit" />
+         <Text layoutX="320.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" 
+         		text="Electronic Sports Coaching" wrappingWidth="443.94287109375">
+            <font>
+               <Font size="24.0" />
+            </font></Text>	
+	  </AnchorPane>  
+	</children>
+</StackPane>

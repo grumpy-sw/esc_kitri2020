@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1138.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager.ManagerPlayersController">
+         <children>
+            <ComboBox fx:id="p_namecombobox" layoutY="34.0" prefWidth="150.0" />
+            
+            <Pane layoutY="87.0" prefHeight="671.0" prefWidth="352.0" style="-fx-border-color: black;">
+               <children>
+                  <Pane layoutX="15.0" prefHeight="299.0" prefWidth="323.0" style="-fx-border-color: black;">
+                     <children>
+                        <ImageView fx:id="imgview" fitHeight="254.0" fitWidth="232.0" layoutX="50.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Label layoutX="37.0" layoutY="420.0" text="선수번호:" />
+                  <Label layoutX="200.0" layoutY="420.0" text="닉네임:" />
+                  <Label layoutX="37.0" layoutY="490.0" text="입단일:" />
+                  <Label layoutX="37.0" layoutY="560.0" text="건강상태:" />
+                  <Label layoutX="37.0" layoutY="630.0" text="급여: $" />
+            <Text fx:id="name" layoutX="37.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="49.74611008167267" />
+            <Text fx:id="birth" layoutX="105.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="95.69532088935375" />
+            <Text fx:id="gender" layoutX="205.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="nat" layoutX="249.0" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.64157897233963" />
+            <Text fx:id="pno" layoutX="110.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="85.6513671875" />
+            <Text fx:id="pid" layoutX="252.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="85.65135550498962" />
+            <Text fx:id="when" layoutX="102.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="149.9999942779541" />
+            <Text fx:id="health" layoutX="121.0" layoutY="575.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="149.9999942779541" />
+            <Text fx:id="sal" layoutX="102.0" layoutY="645.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="206.86595714092255" />
+               </children>
+            </Pane>
+            
+            <Pane layoutX="370.0" layoutY="27.0" prefHeight="223.0" prefWidth="291.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="31.0" layoutY="35.0" text="포지션">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  
+                  <Label layoutX="31.0" layoutY="121.0" text="플레이 스타일">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  
+            <Text fx:id="line" layoutX="35.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Text fx:id="style" layoutX="34.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="149.9999942779541" />
+                  
+               </children></Pane>
+            <Pane layoutX="370.0" layoutY="274.0" prefHeight="484.0" prefWidth="291.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="26.0" layoutY="14.0" text="사용 챔피언">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="pickTable" layoutX="8.0" layoutY="48.0" prefHeight="407.0" prefWidth="275.0">
+                    <columns>
+                      <TableColumn fx:id="PT_champion" prefWidth="57.0" text="챔피언" />
+                      <TableColumn fx:id="PT_games" prefWidth="62.0" text="경기수" />
+                      <TableColumn fx:id="PT_win" prefWidth="45.0" text="승" />
+                      <TableColumn fx:id="PT_lose" minWidth="9.0" prefWidth="45.0" text="패" />
+                      <TableColumn fx:id="PT_winRate" maxWidth="1.7976931348623157E308" prefWidth="65.0" text="승률" />
+                    </columns>
+                  </TableView>
+               </children></Pane>
+            <Pane layoutX="680.0" layoutY="27.0" prefHeight="377.0" prefWidth="337.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="37.0" layoutY="25.0" text="최근 공식경기">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="LMTable" layoutX="7.0" layoutY="71.0" prefHeight="306.0" prefWidth="323.0">
+                     <columns>
+                        <TableColumn fx:id="LMT_dateColumn" prefWidth="34.0" text="일자" />
+                        <TableColumn fx:id="LMT_leagueColumn" prefWidth="65.0" text="경기 정보" />
+                        <TableColumn fx:id="LMT_champColumn" prefWidth="54.0" text="챔피언" />
+                        <TableColumn fx:id="LMT_winloseColumn" prefWidth="42.0" text="승패" />
+                        <TableColumn fx:id="LMT_kdaColumn" prefWidth="58.0" text="KDA" />
+                        <TableColumn fx:id="LMT_kRateColumn" prefWidth="69.0" text="킬관여율" />
+                     </columns>
+                  </TableView>
+               </children></Pane>
+            <Pane layoutX="680.0" layoutY="417.0" prefHeight="342.0" prefWidth="337.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="21.0" layoutY="22.0" text="지난 경기">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Text fx:id="vsorwith" layoutX="121.0" layoutY="95.0" text="VS" />
+            <Text fx:id="lastChampion" layoutX="35.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="사용 챔피언" />
+            <Text fx:id="Opponent_C" layoutX="152.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="상대 선수" />
+            <Text fx:id="Opponent_ID" layoutX="152.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="상대 챔피언" />
+            <Text fx:id="lastStats" layoutX="35.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="경기스텟 String" wrappingWidth="275.00000646710396" />
+               </children></Pane>
+         </children></AnchorPane>

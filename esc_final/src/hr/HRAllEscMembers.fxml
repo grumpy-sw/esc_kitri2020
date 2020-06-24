@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hr.HRAllEscMembersController">
+   <children>
+      <BorderPane fx:id="bp" layoutX="10.0" layoutY="17.0" prefHeight="850.0" prefWidth="1360.0">
+         <top>
+            <AnchorPane fx:id="ap" prefHeight="850.0" prefWidth="1240.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ComboBox fx:id="p_namecombobox" layoutX="631.0" layoutY="434.0" prefHeight="29.0" prefWidth="208.0" />
+                  <Button fx:id="delete" layoutX="735.0" layoutY="480.0" mnemonicParsing="false" onMouseClicked="#deleteAction" prefHeight="67.0" prefWidth="98.0" text="삭제" />
+                  <TableView fx:id="memberstableview" layoutX="107.0" layoutY="113.0" prefHeight="670.0" prefWidth="321.0">
+                    <columns>
+                      <TableColumn fx:id="p_dept" prefWidth="110.0" text="부서" />
+                      <TableColumn fx:id="p_name" prefWidth="95.0" text="이름" />
+                        <TableColumn fx:id="p_id" minWidth="0.0" prefWidth="115.0" text="아이디" />
+                    </columns>
+                  </TableView>
+                  <Text layoutX="107.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="모든 회원 정보 조회" wrappingWidth="331.23828125">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="638.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원 삭제">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="493.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="삭제시킬 아이디:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

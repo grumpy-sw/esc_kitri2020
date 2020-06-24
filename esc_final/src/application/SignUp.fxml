@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="login" prefHeight="850" prefWidth="1000" style="-fx-background-color: #eaeaea;" stylesheets="@SignUp.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SignUpController">
+	<children>
+	  <Label id="subject" layoutX="320" layoutY="150" text="members" />
+	  <Label layoutX="342" layoutY="286" text="Name" />
+	  <Label layoutX="342" layoutY="326" text="Id" />
+	  <Label layoutX="342" layoutY="366" text="Pwd" />
+	  <TextField fx:id="name" layoutX="420" layoutY="286" />
+	  <TextField fx:id="id" layoutX="420" layoutY="324" />
+	  <PasswordField fx:id="pwd" layoutX="420" layoutY="362" />
+	  <Button fx:id="membersBtn" layoutX="381.0" layoutY="471.0" text="members" />
+	  <Button fx:id="cancelBtn" layoutX="510.0" layoutY="471.0" text="cancel" />
+      <Label layoutX="341.0" layoutY="407.0" prefHeight="14.0" prefWidth="50.0" text="Dept" />
+      <ComboBox fx:id = "comboBox" onAction="#comboChanged" layoutX="420.0" layoutY="403.0" prefWidth="150.0" promptText="Select dept"/>	
+	</children>
+</AnchorPane>
